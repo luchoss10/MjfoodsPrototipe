@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MjFoods</string>
+    <string name="menu_incio">Inicio</string>
+    <string name="menu_categorias">Categorias</string>
+    <string name="menu_ofertas">Ofertas</string>
+    <string name="menu_opciones">Opciones</string>
+</resources>
