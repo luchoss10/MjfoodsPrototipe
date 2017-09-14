@@ -50,29 +50,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //Metodo para establecer el fragment de inicio como prederteminado
     private void setFragmentByDefault() {
         changeFragment(new InicioFragment(), navigationView.getMenu().getItem(0));
     }
 
+    //Metodo para el cambio de fragment
     private void changeFragment(Fragment fragment, MenuItem item) {
+        //Se inicia la transaccion del fragmen a otro por lo cual se requiere el fragmentManager
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, fragment)
                 .commit();
+        //Indicamos la opcion de menu pulsada
         item.setChecked(true);
+        //Cambiamos el titulo del actionbar por la opcion del menu en donde se encuentra
         getSupportActionBar().setTitle(item.getTitle());
     }
 
+    //Metodo del actionbar para deectar cuando se han pulsado estos elementos
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
             case android.R.id.home:
+                //Cuando se pulse el boton de home se abrira el menu o drawer layuot
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    //Metodo para detectar que opcion del menu se selecciono
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         boolean fragmentTranssaction = false;
