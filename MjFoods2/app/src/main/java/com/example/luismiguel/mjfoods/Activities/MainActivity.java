@@ -19,7 +19,7 @@ import com.example.luismiguel.mjfoods.R;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Instanciamos el drawer layout y el navigationview para el control de los eventos del menu de nustro equipo
-    //Los elmentos de cada parte ya se aran en sus respectivos fragments
+    //Los elmentos de c4dada parte ya se aran en sus respectivos fragments
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
