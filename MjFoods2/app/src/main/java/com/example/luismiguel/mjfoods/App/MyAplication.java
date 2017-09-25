@@ -8,6 +8,7 @@ import com.example.luismiguel.mjfoods.Models.Restaurante;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import io.realm.RealmObject;
 import io.realm.RealmResults;
 
@@ -24,10 +25,19 @@ public class MyAplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        setupRealmConfig();
         Realm realm = Realm.getDefaultInstance();
         RestauranteRealmID = getIdByTable(realm, Restaurante.class);
         PlatoRealmID = getIdByTable(realm, Plato.class);
         realm.close();
+    }
+
+    private void setupRealmConfig() {
+        Realm.init(getApplicationContext());
+        RealmConfiguration config = new RealmConfiguration.Builder()
+                .deleteRealmIfMigrationNeeded()
+                .build();
+        Realm.setDefaultConfiguration(config);
     }
 
     private <T extends RealmObject> AtomicInteger getIdByTable(Realm realm, Class<T> anyClass) {
