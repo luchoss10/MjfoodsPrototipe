@@ -14,8 +14,10 @@ import io.realm.annotations.Required;
  * Clase para el elemento restaurante empezamos con los metodos basicos ver 0.0.1 probables cambios para obtener una ñlista de platiyos
  */
 
+//Extiende de Realm object para poder hacer la persistencia de datos
 public class Restaurante extends RealmObject {
 
+    //Revision --------------------------------------------------------------------------------
     @PrimaryKey
     private int realmid;
     @Required
