@@ -29,7 +29,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private Activity activity;
 
     //Creamos el metodo para la creacion de el adaptador
-    public RecyclerAdapter(List<Restaurante> restaurantes, int layout, OnItemClickListener itemClickListener, Activity activity) {
+    public RecyclerAdapter(List<Restaurante> restaurantes, int layout, Activity activity, OnItemClickListener itemClickListener) {
         this.restaurantes = restaurantes;
         this.layout = layout;
         this.itemClickListener = itemClickListener;
