@@ -24,7 +24,7 @@
     </LinearLayout>
 
 
-    <!-- The navigation drawer -->
+    <!-- The navigation drawer Pene -->
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navView"
