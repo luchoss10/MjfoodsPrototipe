@@ -18,6 +18,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public class InicioFragment extends Fragment implements RecyclerAdapter.OnItemClickListener {
 
     //Elementos necesarios para visualizar los restaurantes en el fragment inicio
